@@ -1,13 +1,19 @@
-package com.example.demo;
+package com.example.demo.controller;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.example.demo.Flower;
+import com.example.demo.FlowerColor;
+import com.example.demo.FlowerType;
 
 import java.util.List;
 
 @org.springframework.web.bind.annotation.RestController
 @SpringBootApplication
+@RequestMapping("/api")
 public class RestController {
     public static void main(String[] args) {
         SpringApplication.run(RestController.class, args);
