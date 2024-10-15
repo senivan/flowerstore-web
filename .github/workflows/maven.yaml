@@ -7,12 +7,12 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     permissions:
       contents: write
       packages: write
+
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
@@ -37,5 +37,5 @@ jobs:
     - name: Run tests
       run: mvn test
 
-    - name: Check code coverage
+    - name: Generate JaCoCo report
       run: mvn jacoco:report
