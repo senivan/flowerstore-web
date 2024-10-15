@@ -16,6 +16,7 @@ public class Order {
     private static int orderCount = 0;
     private boolean is_paid = false;
     private DeliveryStrategy wayOfDelivery;
+    private boolean is_delivered = false;
     public Order(List<Item> items){
         this.items = items;
         this.orderId = orderCount++;
@@ -43,6 +44,13 @@ public class Order {
     public void deliver(){
         if (is_paid){
             wayOfDelivery.deliver();
+            is_delivered = true;
         }
+    }
+    public boolean getispaid(){
+        return is_paid;
+    }
+    public boolean getisdelivered(){
+        return is_delivered;
     }
 }
