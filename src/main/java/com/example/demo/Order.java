@@ -6,9 +6,11 @@ import com.example.demo.payment.PaymentStrategy;
 import com.example.demo.delivery.DeliveryStrategy;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 @Getter
 @Setter
+@ToString
 public class Order {
     private List<Item> items;
     private int orderId;
