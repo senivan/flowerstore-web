@@ -3,6 +3,8 @@ package com.example.demo;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.example.demo.model.Flower;
+
 public class Store {
     private List<Flower> flowers;
     public Store() {
@@ -20,7 +22,7 @@ public class Store {
             if (!(f.getType().equals(flower.getType()))) {
                 continue;
             }
-            if (f.getSepalLength() != flower.getSepalLength()) {
+            if (f.getLength() != flower.getLength()) {
                 continue;
             }
             result.add(f);

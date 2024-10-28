@@ -43,4 +43,10 @@ public class Flower extends Item {
         this.price = price;
         this.length = length;
     }    
+    public Flower(Flower flower) {
+        this.color = flower.getColor();
+        this.type = flower.getType();
+        this.price = flower.getPrice();
+        this.length = flower.getLength();
+    }
 }
