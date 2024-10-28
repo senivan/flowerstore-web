@@ -2,6 +2,7 @@ package com.example.demo;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.List;
+import com.example.demo.model.Flower;
 
 import org.junit.jupiter.api.Test;
 

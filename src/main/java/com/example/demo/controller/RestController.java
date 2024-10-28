@@ -2,25 +2,29 @@ package com.example.demo.controller;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.example.demo.Flower;
 import com.example.demo.FlowerColor;
 import com.example.demo.FlowerType;
 import com.example.demo.Order;
+import com.example.demo.repository.AppUserRepository;
 
 import java.util.List;
 
-@org.springframework.web.bind.annotation.RestController
 @SpringBootApplication
-@RequestMapping("/api")
+@ComponentScan({"com.example.demo.repository.AppUserRepository"})
+@org.springframework.web.bind.annotation.RestController
 public class RestController {
     public static void main(String[] args) {
         SpringApplication.run(RestController.class, args);
     }
 
-    @GetMapping("/flowers")
+    @GetMapping("/flower")
     public String hello() {
         return List.of(new Flower(FlowerType.ROSE, FlowerColor.RED, 5.0, 10.0),
                 new Flower(FlowerType.TULIP, FlowerColor.YELLOW, 4.0, 5.0),

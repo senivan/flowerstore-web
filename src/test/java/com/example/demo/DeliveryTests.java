@@ -11,6 +11,8 @@ import com.example.demo.delivery.DHLDeliveryStrategy;
 import com.example.demo.delivery.PostDeliveryStrategy;
 import com.example.demo.payment.CreditCardPaymentStrategy;
 
+import com.example.demo.model.Flower;
+
 public class DeliveryTests {
     @Test
     public void testDeliver(){
