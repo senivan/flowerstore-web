@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.example.demo.Flower;
+import com.example.demo.model.Flower;
 import com.example.demo.FlowerColor;
 import com.example.demo.FlowerType;
 import com.example.demo.Order;
